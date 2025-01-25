@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Contact form</title>
+
+  <link rel="stylesheet" href="main.css">
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <main>
+    <form name="contact-form" novalidate>
+      <h1>Contact Us</h1>
+
+      <div class="split">
+        <section id="section-fname">
+          <label class="required" for="fname">First Name</label>
+          <input id="fname" type="text" name="fname" required>
+          <p class="error" id="fname-req">This field is required</p>
+        </section>
+
+        <section id="section-lname">
+          <label class="required" for="lname">Last Name</label>
+          <input id="lname" type="text" name="lname" required>
+          <p class="error" id="lname-req">This field is required</p>
+        </section>
+      </div>
+
+      <section id="section-email">
+        <label class="required" for="email">Email Address</label>
+        <input id="email" type="text" name="email" required>
+        <p class="error" id="email-invalid">Please enter a valid email address</p>
+        <p class="error" id="email-req">This field is required</p>
+      </section>
+
+      <section id="section-query">
+        <!--<fieldset id="query-radio">-->
+        <label class="required" for="query-radio">Query Type</label>
+        <div class="split">
+          <label id="general-enquiry-container" class="radio-box" for="general-enquiry" aria-labelledby="general-enquiry-label" tabindex="0">
+            <input type="radio" name="query" id="general-enquiry" value="general_enquiry" required>
+            <img alt="General enquiry button selected" class="radio-button-img" src="assets/images/icon-radio-selected.svg" width="16" height="16">
+            <div class="radio-button-circle"></div>
+            <div id="general-enquiry-label">General Enquiry</div>
+          </label>
+          <label id="support-request-container" class="radio-box" for="support-request" aria-labelledby="support-request-label" tabindex="0">
+            <input type="radio" name="query" id="support-request" value="support_request" required>
+            <img alt="Support request button selected" class="radio-button-img" src="assets/images/icon-radio-selected.svg" width="16" height="16">
+            <div class="radio-button-circle"></div>
+            <div id="support-request-label">Support Request</div>
+          </label>
+        </div>
+        <!--</fieldset>-->
+        <p class="error" id="query-req">Please select a query type</p>
+      </section>
+
+      <section id="section-message">
+        <label class="required" for="message">Message</label>
+        <textarea id="message" type="textfield" name="message" required></textarea>
+        <p class="error" id="message-req">This field is required</p>
+      </section>
+
+      <label id="checkbox-container" class="checkbox-box" for="consent" aria-labbelledby="consent-label" tabindex="0">
+        <input type="checkbox" name="consent" id="consent" required>
+        <img alt="Checkbox selected" class="checkbox-button-img" src="assets/images/icon-checkbox-check.svg" width="16" height="16">
+        <div class="checkbox-button-square"></div>
+        <div id="consent-label" class="required">I consent to being contacted by the team</div>
+      </label>
+      <p class="error" id="consent-req">To submit this form, please consent to being contacted</p>
+
+      <input type="submit" value="Submit">
+    </form>
+  </main>
+
+  <article id="success-toast" aria-labelledby="toast-title">
+    <div id="toast-title-container">
+      <h1 id="toast-title"><img id="toast-checkmark" alt="Success message check mark" width="18" height="18" src="assets/images/icon-success-check.svg">  <span>Message Sent!</span></h1>
+    </div>
+    <p id="toast-subtitle">Thanks for completing the form. We'll be in touch soon!</p>
+  </article>
+
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+    Coded by <a href="#">yarsvent</a>.
+  </footer>
+</body>
+<script src="main.js"></script>
+</html>
